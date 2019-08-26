@@ -14,61 +14,11 @@
   <body>
     <!-- ---------------меню-------------- -->
 <div class="header">
-      <div class="container">
-    <nav class=" navbar-collapse navbar navbar-expand-lg navbar-dark">
-        <img src="img/kol.png" width="77" height="77" alt="logo"id="koll">
-        <button class="navbar-toggler"type="button" data-toggle="collapse" data-target="#navbarSupportedContent"aria-controls="
-        navbarSupportContent"aria-expanded="false" aria-label="Togglenavigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-         <div class="collapse navbar-collapse justify-content-end align-items-center"id="navbarSupportedContent"> 
-           <ul class="navbar-nav justify-content-end">
-             <li class="nav-item active torpo">
-               <a href="#" class="nav-link">Home</a>
-             </li>
-               <li class="nav-item active">
-               <a href="#" class="nav-link">Pages</a>
-             </li>
-               <li class="nav-item active">
-               <a href="#" class="nav-link">Features</a>
-             </li>
-               <li class="nav-item active">
-               <a href="#" class="nav-link">Extensions</a>
-             </li>
-               <li class="nav-item active">
-               <a href="#" class="nav-link">Tutorials</a>
-             </li>
-               <li class="nav-item active">
-               <a href="#" class="nav-link">Contact us</a>
-             </li>
-           </ul>
-           <ul class="navbar-nav P_fd"> 
-          <li class="eaf_fsadf_asdf_af" active">
-            <a href="#"class="oi_g_f">
-              <img src="img/11.png" alt="">
-            </a>
-          </li>
-          <li class="eaf_fsadf_asdf_af" active">
-            <a href="#"class="oi_g_f">
-              <img src="img/11.png" alt="">
-            </a>
-          </li>
-          <li class="eaf_fsadf_asdf_af" active">
-           <a href="#"class="oi_g_f">
-            <img src="img/11.png" alt="">
-          </a>
-          </li>
-          <li class="eaf_fsadf_asdf_af" active">
-            <a href="#"class="oi_g_f">
-              <img src="img/11.png" alt="">
-            </a>
-          </li>
-           </ul>
-         </div>
-      </nav>
+      <div class="container"style="color:#fff;">
+      Простой адаптивный сайт на html,css
       </div>
       <div id="top_ity"></div>
-      <div class="poto">
+      <div class="poto"style="margin-top:100px;">
 
         <h1>
           creatives
@@ -255,5 +205,27 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+
+
+$('ul#navChild').hide();
+
+$('ul#nav .lystNav').click(function(){
+  var index = $(this).index()/2;
+  
+  $('ul#nav ul#navChild').slideUp(1000);
+  $('ul#nav .count').removeClass('active');
+  $('ul#nav .lystNav').removeClass('active');
+  
+  $('ul#nav ul#navChild').eq(index).slideDown(1000);
+  $(this).addClass('active');
+  $('ul#nav .count').eq(index).addClass('active');
+  
+});
+
+    
+});
+    </script>
   </body>
 </html>
